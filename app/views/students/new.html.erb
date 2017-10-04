@@ -1,16 +1,16 @@
-<%= form_tag teachers_path do %>
-  <%= label_tag(:full_name, "Full name") %>
-  <%= text_field_tag(:full_name) %>
+<%= form_tag students_path do %>
+  <%= label_tag(:one, "Slot one") %>
+  <%= text_field_tag(:one, nil, placeholder: @placeholder_one) %>
 
-  <%= label_tag(:course_name, "Course name") %>
-  <%= text_field_tag(:course_name, nil, placeholder: @placeholder_course) %>
+  <%= label_tag(:two, "Slot two") %>
+  <%= text_field_tag(:two, nil, placeholder: @placeholder_two) %>
 
-  <%= label_tag(:grade_level, "Grade level") %>
-  <%= text_field_tag(:grade_level) %>
+  <%= label_tag(:three, "Slot three") %>
+  <%= text_field_tag(:three, nil, placeholder: @placeholder_three) %>
 
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
-  <%= submit_tag("Create teacher") %>
+  <%= submit_tag("Create student") %>
 <% end %>
 
 <!--
